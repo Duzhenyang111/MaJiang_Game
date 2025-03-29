@@ -17,7 +17,7 @@ def generate_tiles():
 def sort_hand(hand):
     def sort_key(tile):
         if tile[-1] in ['m', 't', 'p']:
-            suit_order = {'m':0, 't':1, 'p':2}
+            suit_order = {'t':0, 'p':1, 'm':2}  # 调整为条、筒、万的顺序
             num = int(tile[:-1])
             return (suit_order[tile[-1]], num)
         else:
